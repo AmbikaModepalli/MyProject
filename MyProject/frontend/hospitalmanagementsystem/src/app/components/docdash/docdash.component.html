@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      
+      <ul class="navbar-nav">
+        <li class="nav-link"><a class="dropdown-item" routerLink="/createpatient" style="color: rgb(25, 25, 25);"> Add Patient</a></li>
+        <li class="nav-link"><a class="dropdown-item" routerLink="/medicinelist" style="color: rgb(25, 25, 25);">View Medicines</a></li>
+        <li class="nav-link"><a class="dropdown-item" routerLink="/home" style="color: rgb(25, 25, 25);">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <hr>
+    <hr>
+    <hr>   
+    <br>
+  <div class="md-3 row">
+    <div class="col-md-6">
+      <h2 style="color: rgb(25, 25, 25); font-size: 30px"
+        >Current Patient List in the Queue
+      </h2>
+    </div>
+
+    <div class="col-md-6">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        [(ngModel)]="searchText"
+        (input)="applyFilter()"
+      />
+    </div>
+  </div>
+  <div class="tableFixHead">
+    <br>
+    <table class="table table-striped">
+    <thead class="table-header">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood type</th>
+        <th>Urgency</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <!-- <tr *ngFor="let patient of patients | filter:searchText"> -->
+      <tr *ngFor="let patient of filteredPatients">
+        <td>{{patient.id}}</td>
+        <td>{{patient.name}}</td>
+        <td>{{patient.age}}</td>
+        <td>{{patient.blood}}</td>
+        <td>{{patient.urgency}}</td>
+        <td>
+        
+          <div class="btn-group">
+            <a (click) = "updatePatient(patient.id)" class="btn"><i class="fa-solid fa-pen" style="color: #167db1;"></i></a>
+            <a (click) = "deletePatient(patient.id)" class="btn"><i class="fa-solid fa-trash" style="color: #167db1;"></i></a>
+            <a (click) = "viewPatient(patient.id)" class="btn"><i class="fa-solid fa-eye" style="color: #167db1;"></i></a>
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  
+  

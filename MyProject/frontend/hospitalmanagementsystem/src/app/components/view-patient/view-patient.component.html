@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        <ul class="navbar-nav">
+          <li class="nav-link"><a class="dropdown-item" routerLink="/docdash" style="color: rgb(25, 25, 25);">Back</a></li>        </ul>
+      </div>
+    </div>
+  </nav>
+<hr>
+<hr>
+<hr>
+<div class="container">
+    <h2 style="color: rgb(25, 25, 25); font-size: 30px">Patient Diagnosis Details</h2>
+<div>
+<div>
+    <label> <b> Name: </b></label> {{patient.name}}
+</div>
+
+<div>
+    <label> <b> Age: </b></label> {{patient.age}}
+</div>
+
+<div>
+    <label> <b> Blood Type: </b></label> {{patient.blood}}
+</div>
+
+<div>
+    <label> <b> Dosage </b></label> {{patient.dose}}
+</div>
+
+<div>
+    <label> <b> Urgency </b></label> {{patient.urgency}}
+</div>
+
+<div>
+    <label> <b> Detailed Diagnosis & Prescription: </b></label> {{patient.prescription}}
+</div>    
+</div>
+</div>

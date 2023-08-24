@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        <ul class="navbar-nav">
+          <li class="nav-link"><a class="dropdown-item" routerLink="/appointmentlist" style="color: rgb(25, 25, 25);">Back</a></li>        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+<hr>
+<hr>
+<hr>
+<br>
+<h2 style="color: rgb(25, 25, 25); font-size: 30px">Add New Appointment</h2>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="id" [(ngModel)]="appointment.id" name="id" placeholder="Enter ID">
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="appointment.name" name="name" placeholder="Enter Name">
+    </div>
+
+    <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control" id="age" [(ngModel)]="appointment.age" name="age" placeholder="Enter Age">
+    </div>
+
+    <div class="form-group">
+        <label>Symptoms</label>
+        <input type="text" class="form-control" id="symptoms" [(ngModel)]="appointment.symptoms" name="symptoms" placeholder="Enter Symptoms">
+    </div>
+
+    <div class="form-group">
+        <label>Number</label>
+        <input type="text" class="form-control" id="number" [(ngModel)]="appointment.number" name="number" placeholder="Enter Number">
+    </div>
+<br>
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
+</div>

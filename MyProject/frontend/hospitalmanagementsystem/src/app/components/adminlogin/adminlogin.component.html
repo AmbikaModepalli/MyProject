@@ -1,0 +1,55 @@
+<<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="color: rgb(25, 25, 25);;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/home">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+  
+    <div class="row">
+    
+
+        <div class="col-md-6">
+            <div class="card">
+            
+                <div class="text-center">
+                    <p class="heading">Login As Admin</p>
+                    
+
+                </div>
+                <hr>
+                <form>
+                  
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><h4>Username</h4></label>
+                        <input type="text" name="username2" [(ngModel)]="username2" class="form-control" id="formGroupExampleInput" placeholder="Username" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label"><h4>Password</h4></label>
+                        <input type="password" name="password2" [(ngModel)]="password2" class="form-control" id="formGroupExampleInput2" placeholder="Password" required>
+                      </div>
+                
+                        <button (click)="checkLogin()"  style="margin: 5px;"  class="btn btn-dark" type="button">Login</button>
+                        
+
+                  
+                </form>
+             
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

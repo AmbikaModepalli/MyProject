@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+        <ul class="navbar-nav">
+          <li class="nav-link"><a class="dropdown-item" routerLink="/medicinelist" style="color: rgb(25, 25, 25);">Back</a></li>        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+    <hr>
+    <hr>
+    <hr>
+    <br>
+    <h2 style="color: rgb(25, 25, 25); font-size: 30px">Add New Medicine</h2>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> ID </label>
+            <input type="number" class="form-control" [(ngModel)]="medicine.id" id="id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label> Drug Name</label>
+            <input type="text" class="form-control" [(ngModel)]="medicine.drugName" id="drugName" name="drugName">
+        </div>
+
+        <div class="form-group">
+            <label> Stock </label>
+            <input type="text" class="form-control" [(ngModel)]="medicine.stock" id="stock" name="stock">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>

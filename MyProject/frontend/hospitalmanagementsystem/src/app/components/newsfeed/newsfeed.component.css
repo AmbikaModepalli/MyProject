@@ -1,0 +1,12 @@
+footer{
+    color: rgb(25, 25, 25);;
+    height: 200px;
+    background-color: rgb(50, 150, 200);
+}
+footer p{
+    padding: 20px 50px;
+}
+#header{
+    color: rgb(50, 150, 200);
+    font-weight: 600;
+}

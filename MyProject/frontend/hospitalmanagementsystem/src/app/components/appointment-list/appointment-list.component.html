@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-sm fixed-top bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" id="mainname">People Care Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      
+      <ul class="navbar-nav">
+        <li class="nav-link"><a class="dropdown-item" routerLink="/admindash" style="color: rgb(25, 25, 25);">Back</a></li>
+        <li class="nav-link"><a class="dropdown-item" routerLink="/createappointment" style="color: rgb(25, 25, 25);">New Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">People Care Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/admindash">Back</a>
+          
+            <li class="nav-item">
+              <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/createappointment">Add Appointments</a>
+          </ul>
+
+      
+    </div>
+</nav> -->
+
+<div class="container">
+<hr>
+<hr>
+<hr>
+<br>
+<h2 style="color: rgb(25, 25, 25); font-size: 30px"
+        >Appointments List
+</h2>
+<div class="tableFixHead"> 
+  <br />
+<table class="table table-striped">
+    <thead class="table-primary">
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Age </th>
+            <th> Symptoms </th>
+            <th> Number </th>
+            <th> Action </th>       
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr *ngFor="let appointment of appointments">
+            <td> {{ appointment.id }} </td>
+            <td> {{ appointment.name }} </td>
+            <td> {{ appointment.age }} </td>
+            <td> {{ appointment.symptoms }} </td>
+            <td> {{ appointment.number }} </td>
+
+            <td>
+                
+                <button (click)="deleteAppointment(appointment.id)" 
+                class="btn" style="margin-left: 10px"
+                > <i class="fa-solid fa-trash" style="color: #167db1;"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>    
+</table>
+</div>
+</div>
